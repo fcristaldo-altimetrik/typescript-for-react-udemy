@@ -46,7 +46,7 @@ enum Color {
   blue
 }
 let myFavColor: Color = Color.blue;
-let myFavColor2: Color = Color[0]; //equivalent to red
+let myFavColor2: string = Color[0]; //equivalent to red
 
 //we can specify numbers for each value
 enum Colors {
@@ -54,7 +54,7 @@ enum Colors {
   green = 22,
   blue = 88
 }
-let myFavColor3: Color = Colors[22]; //equivalent to red
+let myFavColor3: string = Colors[22]; //equivalent to red
 
 // Any, for unknown type
 let any: any;
@@ -63,22 +63,20 @@ any = "str";
 any = true;
 
 // Type assertions
-try {
-  const email = document.getElementById("email");
-  if (email) {
-    email.addEventListener("change", (e) => {
-      const input = e.currentTarget;
-      //console.log(input.value) //We must assert that it is a HTMLInputElement
+// commented to avoid console errors, to be able to run
+// const email = document.getElementById("email");
+// if (email) {
+//   email.addEventListener("change", (e) => {
+//     const input = e.currentTarget;
+//     //console.log(input.value) //We must assert that it is a HTMLInputElement
 
-      const input2 = e.currentTarget as HTMLInputElement;
-      console.log(input2.value);
-    });
-  }
-} catch (err) {
-  console.log(err);
-}
+//     const input2 = e.currentTarget as HTMLInputElement;
+//     console.log(input2.value);
+//   });
+// }
 
 export function runTypes() {
+  console.log("\nrunTypes");
   console.log(uppercaseFirstLetter("hello"));
   console.log(uppercaseFirstLetter(null));
 }
