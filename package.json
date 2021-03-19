@@ -1,0 +1,18 @@
+{
+  "name": "simple-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "start":"nodemon -w dist -q dist/index.js",
+    "dev":"concurrently -k -n COMPILER,NODEMON -c yellow,blue \"npm run build\" \"npm run start\""
+  },
+  "author": "fcristaldo-altimetrik",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.2.3"
+  }
+}
