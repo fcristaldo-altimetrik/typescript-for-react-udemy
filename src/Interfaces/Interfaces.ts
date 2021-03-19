@@ -57,14 +57,15 @@ interface Sum {
 const sum: Sum = (a, b) => a + b;
 
 // Extending interfaces
-interface Parent {
+export interface Parent {
   x: string;
 }
-interface Parent2 {
+export interface Parent2 {
   z: string;
 }
-interface Child extends Parent, Parent2 {
+export interface Child extends Parent, Parent2 {
   y: string;
+  getCoorditates(): { x: string; y: string; z: string };
 }
 let child: Child = { x: "", y: "", z: "" };
 
