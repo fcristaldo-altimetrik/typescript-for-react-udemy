@@ -32,6 +32,7 @@ const multiplyModule = __importStar(require("./multiply"));
 const a = 2;
 const b = 3;
 function runModules() {
+    console.log("\nrunModules");
     // with import * as someName we use defualt to call the default export function
     console.log(`1) ${a} * ${b} = ${multiplyModule.default(a, b)}`);
     // calling the alias

@@ -52,21 +52,18 @@ any = 2;
 any = "str";
 any = true;
 // Type assertions
-try {
-    const email = document.getElementById("email");
-    if (email) {
-        email.addEventListener("change", (e) => {
-            const input = e.currentTarget;
-            //console.log(input.value) //We must assert that it is a HTMLInputElement
-            const input2 = e.currentTarget;
-            console.log(input2.value);
-        });
-    }
-}
-catch (err) {
-    console.log(err);
-}
+// commented to avoid console errors, to be able to run
+// const email = document.getElementById("email");
+// if (email) {
+//   email.addEventListener("change", (e) => {
+//     const input = e.currentTarget;
+//     //console.log(input.value) //We must assert that it is a HTMLInputElement
+//     const input2 = e.currentTarget as HTMLInputElement;
+//     console.log(input2.value);
+//   });
+// }
 function runTypes() {
+    console.log("\nrunTypes");
     console.log(uppercaseFirstLetter("hello"));
     console.log(uppercaseFirstLetter(null));
 }
